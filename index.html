@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omi - Voice Recording</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span class="time">10:57</span>
+            </div>
+            <div class="status-right">
+                <div class="signal-indicator">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="battery-indicator">
+                    <div class="battery-level"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Recording Widget -->
+            <div class="recording-widget glass-panel">
+                <div class="waveform-container">
+                    <div class="waveform">
+                        <div class="wave-bar" data-height="0.3"></div>
+                        <div class="wave-bar" data-height="0.7"></div>
+                        <div class="wave-bar" data-height="0.4"></div>
+                        <div class="wave-bar" data-height="0.8"></div>
+                        <div class="wave-bar" data-height="0.6"></div>
+                        <div class="wave-bar" data-height="0.9"></div>
+                        <div class="wave-bar" data-height="0.5"></div>
+                        <div class="wave-bar" data-height="0.7"></div>
+                    </div>
+                </div>
+                
+                <div class="record-button-container">
+                    <button class="record-button" id="recordButton">
+                        <div class="record-icon"></div>
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-ring-2"></div>
+                    </button>
+                </div>
+                
+                <div class="recording-status">
+                    <span id="recordingStatus">Tap to start recording</span>
+                </div>
+                
+                <div class="transcript-preview">
+                    <div class="transcript-text" id="transcriptText">
+                        Live transcript will appear here...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-bar glass-panel">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" placeholder="Search conversations..." class="search-input">
+                </div>
+            </div>
+
+            <!-- Achievement Streaks -->
+            <div class="achievements-section">
+                <h3 class="section-title">Achievements</h3>
+                <div class="achievements-carousel">
+                    <div class="achievement-card glass-panel" data-achievement="0">
+                        <div class="achievement-icon">🔥</div>
+                        <div class="achievement-info">
+                            <div class="achievement-title">5-Day Streak!</div>
+                            <div class="progress-ring">
+                                <svg class="progress-ring-svg">
+                                    <circle class="progress-ring-circle-bg" cx="20" cy="20" r="16"/>
+                                    <circle class="progress-ring-circle" cx="20" cy="20" r="16" data-progress="100"/>
+                                </svg>
+                                <span class="progress-text">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card glass-panel" data-achievement="1">
+                        <div class="achievement-icon">🏆</div>
+                        <div class="achievement-info">
+                            <div class="achievement-title">100 Conversations</div>
+                            <div class="progress-ring">
+                                <svg class="progress-ring-svg">
+                                    <circle class="progress-ring-circle-bg" cx="20" cy="20" r="16"/>
+                                    <circle class="progress-ring-circle" cx="20" cy="20" r="16" data-progress="75"/>
+                                </svg>
+                                <span class="progress-text">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card glass-panel" data-achievement="2">
+                        <div class="achievement-icon">🌅</div>
+                        <div class="achievement-info">
+                            <div class="achievement-title">Early Bird</div>
+                            <div class="progress-ring">
+                                <svg class="progress-ring-svg">
+                                    <circle class="progress-ring-circle-bg" cx="20" cy="20" r="16"/>
+                                    <circle class="progress-ring-circle" cx="20" cy="20" r="16" data-progress="50"/>
+                                </svg>
+                                <span class="progress-text">50%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conversation Timeline -->
+            <div class="conversations-section">
+                <h3 class="section-title">Recent Conversations</h3>
+                <div class="conversation-timeline">
+                    <div class="conversation-card glass-panel" data-conversation="0">
+                        <div class="conversation-header">
+                            <div class="conversation-icon">💡</div>
+                            <div class="conversation-meta">
+                                <div class="conversation-category entrepreneurship">Entrepreneurship</div>
+                                <div class="conversation-time">Jun 17, 2:00 PM</div>
+                            </div>
+                        </div>
+                        <div class="conversation-content">
+                            <h4 class="conversation-title">Startup Networking at AI Event in SF</h4>
+                            <p class="conversation-description">Participants discussed their roles at various AI-focused startups and research centers</p>
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-card glass-panel" data-conversation="1">
+                        <div class="conversation-header">
+                            <div class="conversation-icon">📚</div>
+                            <div class="conversation-meta">
+                                <div class="conversation-category education">Education</div>
+                                <div class="conversation-time">Jun 17, 1:38 PM</div>
+                            </div>
+                        </div>
+                        <div class="conversation-content">
+                            <h4 class="conversation-title">Discussing EdTech Outreach and Student</h4>
+                            <p class="conversation-description">The conversation centers on strategies for engaging students within EdTech platforms</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Celebration Effect -->
+    <div class="celebration-effect" id="celebrationEffect">
+        <div class="celebration-particle">🎉</div>
+        <div class="celebration-particle">✨</div>
+        <div class="celebration-particle">🎊</div>
+        <div class="celebration-particle">⭐</div>
+        <div class="celebration-particle">🌟</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
